@@ -23,7 +23,7 @@ html
       .l-container
         = link_to "Accueil", '/', class: 'menu-item'
         = link_to "Blog", '/blog', class: 'menu-item'
-        = link_to "Projets", '/projects', class: 'menu-item'
+        /= link_to "Projets", '/projects', class: 'menu-item'
         = link_to "A propos", '/about', class: 'menu-item'
 
     header.l-container.pure-g(role="banner")
@@ -34,7 +34,7 @@ html
       .pure-u-1
         = yield
 
-    footer(role="contentinfo")
+    footer(role="contentinfo" id="footer")
       .l-container
         p Depuis 2014 avec un blog pas comme les autres !
 
