@@ -4,7 +4,7 @@
 
 set :slim, pretty: true
 
-set :blog_title, 'Blue Sky Blog'
+set :blog_title, 'Krep Blog'
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
