@@ -1,0 +1,12 @@
+
+article
+  h2 = link_to article.title, article
+  p
+    ' Le
+    time(datetime=article.date) = article.date.strftime('%d/%m/%Y')
+    '  par
+    = link_to article.data.authors, '/about' if article.data.authors
+
+  = article.summary
+
+  = link_to "Lire plus...", article

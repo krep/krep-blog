@@ -1,0 +1,27 @@
+
+.l-topbar
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: stretch
+
+  height: 40px
+
+  background: #35D387
+
+.menu-item, .topbar-item
+  padding: 0 9px
+
+  line-height: 39px
+  color: darken(#FFFFFF, 2%)
+  text-decoration: none
+
+  transition: color, 0.4s
+
+  &:hover
+    color: darken(#FFFFFF, 2%)
+    background: #2AB773
+
+@media all and (max-width: 500px)
+  .l-menu
+    flex-direction: column

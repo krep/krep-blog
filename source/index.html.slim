@@ -1,0 +1,13 @@
+
+section
+  p Bienvenue sur notre super blog, nous G et A, développeurs sur les technologies tel que....
+
+section
+  header
+    h1 Derniers articles parus
+
+  - blog.articles[0...5].each do |article|
+    = partial 'article', { locals: { article: article } }
+
+  hr
+  p = link_to "Voir plus d'articles", '/blog'
