@@ -11,6 +11,7 @@ html
     title = page_title
 
     link(rel='stylesheet' href='http://yui.yahooapis.com/pure/0.5.0/pure-min.css')
+    link(rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
     = stylesheet_link_tag 'application'
 
     /[if lt IE 9]
@@ -21,21 +22,30 @@ html
   body
     nav(role='navigation' id='menu' class='l-topbar')
       .l-container
-        = link_to "Accueil", '/', class: 'menu-item'
-        = link_to "Blog", '/blog', class: 'menu-item'
+        = link_to '/', class: 'menu-item' do
+          i.fa.fa-home  Accueil
+        = link_to '/blog', class: 'menu-item' do
+          i.fa.fa-th-large  Blog
         /= link_to "Projets", '/projects', class: 'menu-item'
-        = link_to "A propos", '/about', class: 'menu-item'
+        = link_to '/about', class: 'menu-item' do
+          i.fa.fa-info-circle  A propos
 
     header.l-container.pure-g(role="banner")
       .pure-u-1
-        h1 = blog_title
+        h1.page-title = blog_title
 
     section.l-container.pure-g(role="main")
       .pure-u-1
         = yield
 
     footer(role="contentinfo" id="footer")
-      .l-container
-        p Depuis 2014 avec un blog pas comme les autres !
+      .l-container.pure-g
+        .pure-u-3-4
+          p Depuis 2014 avec un blog pas comme les autres !
+
+        .pure-u-1-4.text-align-right
+          p
+            = link_to '/feed.xml', title: 'Flux RSS' do
+              i.fa.fa-rss
 
 
