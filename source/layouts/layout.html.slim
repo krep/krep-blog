@@ -20,7 +20,7 @@ html
     = feed_tag :atom, "#{blog.options.prefix}/feed.xml", title: 'Atom Feed'
 
   body
-    nav(role='navigation' id='menu' class='l-topbar')
+    nav#menu.l-topbar(role='navigation')
       .l-container
         = link_to '/', class: 'menu-item' do
           i.fa.fa-home  Accueil
@@ -30,26 +30,25 @@ html
         = link_to '/about', class: 'menu-item' do
           i.fa.fa-info-circle  A propos
 
-    header#page-header.l-container.pure-g(role="banner")
-      .pure-u-1
-        h1.page-title = blog_title
-
-    section#page-content.l-container.pure-g(role="main")
-      .pure-u-1
-        = yield
-
-    footer#page-footer(role="contentinfo")
-      .l-container.pure-g
-        .pure-u-3-4
-          p Depuis 2014 avec un blog pas comme les autres !
-
-        .pure-u-1-4.text-align-right
-          p
-            = link_to '/feed.xml', title: 'Flux RSS' do
-              i.fa.fa-rss
-
+    #page
+      header#page-header.l-container.pure-g(role="banner")
         .pure-u-1
-          = link_to 'http://www.w3.org/html/logo/' do
-            = image_tag 'http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png', width: 83, height: 32, alt: 'HTML5 Powered with CSS3 / Styling, and Semantics', title: 'HTML5 Powered with CSS3 / Styling, and Semantics'
+          h1.page-title = blog_title
 
+      section#page-content.l-container.pure-g(role="main")
+        .pure-u-1
+          = yield
 
+      footer#page-footer(role="contentinfo")
+        .l-container.pure-g
+          .pure-u-3-4
+            p Depuis 2014 avec un blog pas comme les autres !
+
+          .pure-u-1-4.text-align-right
+            p
+              = link_to '/feed.xml', title: 'Flux RSS' do
+                i.fa.fa-rss
+
+          .pure-u-1
+            = link_to 'http://www.w3.org/html/logo/' do
+              = image_tag 'http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png', width: 83, height: 32, alt: 'HTML5 Powered with CSS3 / Styling, and Semantics', title: 'HTML5 Powered with CSS3 / Styling, and Semantics'
