@@ -1,0 +1,16 @@
+
+= wrap_layout :layout do
+  article
+    - unless current_article.title.nil?
+      header.post-title
+        h1 = current_article.title
+
+    section.post-content
+      = yield
+
+    footer.post-footer
+      ul.tags
+        - current_article.tags.each do |tag|
+          li.tag.tag-name
+            i.fa.fa-tag
+            = tag

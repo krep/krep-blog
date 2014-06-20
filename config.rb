@@ -20,7 +20,7 @@ activate :blog do |blog|
   # Matcher for blog source files
   blog.sources = "/articles/{year}/{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  blog.layout = 'layout'
+  blog.layout = 'article'
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
@@ -106,7 +106,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
