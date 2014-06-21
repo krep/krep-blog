@@ -92,7 +92,7 @@ end
 helpers do
   def page_title
     return current_page.data.title + ' &ndash; ' + blog_title unless current_page.data.title.nil?
-    return current_article.title + ' &ndash; ' + blog_title unless current_article.nil? && current_article.title
+    return current_article.title + ' &ndash; ' + blog_title if !current_article.nil? && current_article.title
     blog_title
   end
 end
