@@ -113,4 +113,9 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  ignore 'stylesheets/base/README.*'
+  ignore 'stylesheets/layout/README.*'
+  ignore 'stylesheets/modules/README.*'
+  ignore 'stylesheets/states/README.*'
 end
