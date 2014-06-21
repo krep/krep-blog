@@ -1,5 +1,5 @@
 
-section
+section#introduction
   p
     | Bienvenue sur notre blog ! Nous espérons que vous trouverez des sujets qui vous intéressont comme ils nous intéressent.
     br
@@ -12,5 +12,4 @@ section
   - blog.articles[0...5].each do |article|
     = partial 'article', { locals: { article: article } }
 
-  hr
-  p = link_to "Voir plus d'articles", '/blog'
+  p = link_to "Voir plus d'articles", '/blog', class: 'button'
