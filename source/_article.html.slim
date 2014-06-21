@@ -1,12 +1,17 @@
 
-article
-  h2 = link_to article.title, article
-  p
-    ' Le
-    time(datetime=article.date) = article.date.strftime('%d/%m/%Y')
-    '  par
-    = link_to article.data.authors, '/about' if article.data.authors
+article.post-background
+  header
+    h2.post.post-title
+      = link_to article.title, article
 
-  = article.summary
+    p.post.post-infos
+      ' Le
+      time(datetime=article.date) = article.date.strftime('%d/%m/%Y')
+      '  par
+      = link_to article.data.authors, '/about' if article.data.authors
 
-  = link_to "Lire plus...", article
+  section.post.post-content
+    = article.summary
+
+  footer.post.post-footer
+    = link_to "&gt; Lire la suite", article
