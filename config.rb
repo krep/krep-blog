@@ -14,7 +14,7 @@ Time.zone = 'Paris'
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  blog.prefix = 'blog'
+  blog.prefix = ''
 
   blog.permalink = "/articles/{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files

@@ -3,13 +3,21 @@ section#introduction
   p
     | Bienvenue sur notre blog ! Nous espérons que vous trouverez des sujets qui vous intéressont comme ils nous intéressent.
     br
-    | Si vous avez des questions ou commentaires à faire n'hésitez pas!
+    | Si vous avez des questions ou commentaires à faire n'hésitez pas !
 
 section
   header
     h1 Derniers articles parus
 
-  - blog.articles[0...5].each do |article|
+  - blog.articles[0...10].each do |article|
     = partial 'article', { locals: { article: article } }
 
-  p = link_to "Voir plus d'articles", '/blog', class: 'button'
+- if paginate && num_pages > 1
+  p = "Page #{page_number} sur #{num_pages}"
+
+  - if prev_page
+    p = link_to "Page précédente", prev_page
+
+  - if paginate
+    - if next_page
+      p = link_to "Page suivante", next_page
