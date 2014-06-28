@@ -24,19 +24,19 @@ html
       .l-container
         = link_to '/', class: 'menu-item' do
           i.fa.fa-home  Blog
-        = link_to '/about', class: 'menu-item' do
-          i.fa.fa-info-circle  A propos
+        / = link_to '/about', class: 'menu-item' do
+        /   i.fa.fa-info-circle  A propos
 
     #page
-      header#page-header.l-container.pure-g(role="banner")
+      header#page-header.l-container.pure-g(role='banner')
         .pure-u-1
           h1.page-title = page_title
 
-      section#page-content.l-container.pure-g(role="main")
+      section#page-content.l-container.pure-g(role='main')
         .pure-u-1
           = yield
 
-      footer#page-footer(role="contentinfo")
+      footer#page-footer(role='contentinfo')
         .l-container.pure-g
           .pure-u-3-4
             p Depuis 2014 avec un blog pas comme les autres !
