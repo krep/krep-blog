@@ -49,3 +49,12 @@ html
           .pure-u-1
             = link_to 'http://www.w3.org/html/logo/' do
               = image_tag 'http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png', width: 83, height: 32, alt: 'HTML5 Powered with CSS3 / Styling, and Semantics', title: 'HTML5 Powered with CSS3 / Styling, and Semantics'
+
+    javascript:
+      var disqus_shortname = 'krepblog';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());

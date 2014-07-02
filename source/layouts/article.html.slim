@@ -15,7 +15,7 @@
             i.fa.fa-tag
             = tag
 
-  div(id='disqus_thread')
+  #disqus_thread
     javascript:
         var disqus_shortname = 'krepblog';
         (function() {
@@ -25,6 +25,5 @@
         })();
     noscript
       | Please enable JavaScript to view the <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus</a>.
-    a(href='http://disqus.com' class='dsq-brlink')
+    = link_to 'http://disqus.com', class: 'dsq-brlink' do
       | comments powered by <span class='logo-disqus'>Disqus</span>
-
