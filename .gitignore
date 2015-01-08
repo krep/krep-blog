@@ -18,3 +18,6 @@
 .DS_Store
 
 *.sublime-workspace
+
+# Ignore FUSE hidden file
+.fuse_hidden*
