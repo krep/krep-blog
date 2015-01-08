@@ -7,7 +7,7 @@ section#introduction
 
 section
   header
-    h1 Derniers articles parus
+    h2 Derniers articles parus
 
   - blog.articles[0...10].each do |article|
     = partial 'article', { locals: { article: article } }

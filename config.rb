@@ -90,10 +90,16 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def page_title
-    return current_page.data.title + ' &ndash; ' + blog_title unless current_page.data.title.nil?
-    return current_article.title + ' &ndash; ' + blog_title if !current_article.nil? && current_article.title
-    blog_title
+  def page_title(tab: false)
+    unless tab
+      return current_page.data.title unless current_page.data.title.nil?
+      return current_article.title if !current_article.nil? && current_article.title
+    else
+      return current_page.data.title + " &ndash; " + blog_title unless current_page.data.title.nil?
+      return current_article.title + " &ndash; " + blog_title if !current_article.nil? && current_article.title
+    end
+
+    return blog_title
   end
 end
 

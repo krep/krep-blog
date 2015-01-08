@@ -1,9 +1,12 @@
 
 = wrap_layout :layout do
   article
-    - unless current_article.title.nil?
-      header.post-title
-        h1 = current_article.title
+    / - unless current_article.title.nil?
+    /   header.post-title
+    /     h1 = current_article.title
+    header#page-header.l-container.pure-g(role='banner')
+      .pure-u-1
+        h1.page-title = page_title
 
     section.post-content
       = yield
