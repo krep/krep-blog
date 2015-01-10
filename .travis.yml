@@ -14,10 +14,10 @@ branches:
   - master
 
 script:
+  - git remote set-url origin "https://${GH_TOKEN}@github.com/krep/krep.github.io.git"
+
   - bundle exec middleman build
   - bundle exec middleman deploy
-
-  - git remote set-url origin "https://${GH_TOKEN}@github.com/krep/krep.github.io.git"
 
 env:
   global:
