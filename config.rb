@@ -85,7 +85,7 @@ activate :webp
 activate :deploy do |deploy|
   deploy.method = :git
   # deploy.remote = 'git@github.com:krep/krep.github.io.git'
-  deploy.remote = 'https://github.com/krep/krep.github.io.git'
+  deploy.remote = 'https://${ENV['GH_TOKEN']}@github.com/krep/krep.github.io.git'
   deploy.branch = 'master'
 end
 
