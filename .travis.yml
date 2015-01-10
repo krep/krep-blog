@@ -6,14 +6,19 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -y webp
 
-  - git config --global user.email "enyriel@gmail.com"
-  - git config --global user.name "Aurélien Léger"
+  - git config --global user.email "krep.bot@outlook.com"
+  - git config --global user.name "Krep Bot"
 
 branches:
   only:
-    - master
+  - master
 
 script:
   - bundle exec middleman build
   - bundle exec middleman deploy
 
+  - git remote set-url origin "https://${GH_TOKEN}@github.com/krep/krep.github.io.git"
+
+env:
+  global:
+    secure: MBKdc4J4vnyChTzlw4c18CzY+/V/OVqGQwPpEhuIrDhn302fbThz9/fNcOfMvJLty17zgpHahOQS3xcQYY2EQ1PBnSTY3XNzKIRyXqkWQGiRm7zgfrDBMumxBuxO26s6qs9Kiicr0ArbSiY7Ycz8V3ZBwRSWEtT/VjUATW4jZDg=
