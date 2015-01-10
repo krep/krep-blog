@@ -9,8 +9,8 @@ before_install:
 
   - gem update bundler
 
-  - git config --global user.email "krep.bot@outlook.com"
-  - git config --global user.name "Krep Bot"
+  - git config --global user.email "${GIT_EMAIL}"
+  - git config --global user.name "${GIT_NAME}"
 
 branches:
   only:
