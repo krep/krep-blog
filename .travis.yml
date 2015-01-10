@@ -6,4 +6,7 @@ branches:
   only:
     - master
 
-script: ./travis-builds.sh
+script:
+  - bundle exec middleman build
+  - bundle exec middleman deploy
+
