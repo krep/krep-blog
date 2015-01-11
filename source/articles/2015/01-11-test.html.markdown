@@ -6,5 +6,3 @@ authors: Aurélien & Guillaume
 description: Ouverture du blog des kreps, par Guillaume et Aurélien.
 published: false
 ---
-
-Vive les cornichons
