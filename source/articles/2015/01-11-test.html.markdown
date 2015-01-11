@@ -1,0 +1,10 @@
+---
+title: Test
+date: 2015-01-11 16:00 CEST
+tags: test, article, travis
+authors: Aurélien & Guillaume
+description: Ouverture du blog des kreps, par Guillaume et Aurélien.
+published: false
+---
+
+Cet article n'est écrit qu'à des fins de tests !
